@@ -24,7 +24,7 @@ public class Bolsa {
      * para fazer print posteriormente
      * @return
      */
-    public List<Consumivel> verConsumiveis(){
+    public ArrayList<Consumivel> verConsumiveis(){
         return this.consumiveis;
     }
 }

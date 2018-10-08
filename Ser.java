@@ -6,4 +6,8 @@ class Ser {
     public Ser(String nome){
         this.nome = nome;
     }
+    
+    public String getNome(){
+        return this.nome;
+    }
 }
