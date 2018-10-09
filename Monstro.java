@@ -4,15 +4,15 @@ public class Monstro extends Ser{
     private int vidaAtual;
     private int forca;
     private int vidaMaxima;
-    private int esquiva;
+    private double esquiva;
     private TipoElemento tipoElemento;
 
-    public Monstro(int vidaAtual, int forca, int vidaMaxima, int esquiva, TipoElemento tipoElemento, String nome) {
-        super(nome);
-        this.vidaAtual = vidaAtual;
-        this.forca = forca;
-        this.vidaMaxima = vidaMaxima;
-        this.esquiva = esquiva;
+    public Monstro(int nivel /*, tipo elemento?*/) {
+        super("Monstro nivel: " + nivel);
+        this.vidaAtual = vidaMaxima;
+        this.forca = (int)(Math.random()*((0.2 * vidaMaxima - 0.10*vidaMaxima) + 1));
+        this.vidaMaxima = 10+(10*nivel);
+        this.esquiva = 1.5 * nivel;
         this.tipoElemento = tipoElemento;
     }
 
@@ -48,7 +48,7 @@ public class Monstro extends Ser{
         this.vidaMaxima = vidaMaxima;
     }
 
-    public int getEsquiva() {
+    public double getEsquiva() {
         return esquiva;
     }
 

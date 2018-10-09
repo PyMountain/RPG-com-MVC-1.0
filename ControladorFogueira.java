@@ -5,11 +5,11 @@ public class ControladorFogueira {
     private TelaFogueira telaFogueira;
     public Jogador jogador;
     private ArrayList<Consumivel> itens;
-    private ControladorEncontro ctrlEncontro;
+    private ControladorPrincipal ctrlEncontro;
     private ArrayList<TipoEvento> eventos;
     private ArrayList<Feitico> feiticos;
     
-    public ControladorFogueira(ControladorEncontro ctrlEncontro){
+    public ControladorFogueira(ControladorPrincipal ctrlEncontro){
         this.ctrlEncontro = ctrlEncontro;
         this.jogador = ctrlEncontro.getJogador();
         telaFogueira = new TelaFogueira(this);
@@ -42,8 +42,8 @@ public class ControladorFogueira {
     }
     
     public void iniciaEncontro(){
-        telaFogueira.mostraInicioFogueira();
         jogador.setVidaAtual(jogador.getVidaTotal());
+        telaFogueira.mostraInicioFogueira();
     }
     
     public void verDiario(){
